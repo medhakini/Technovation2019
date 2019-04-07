@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import java.util.Locale;
+import android.content.Intent;
 
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,7 +46,7 @@ public class MainActivity extends Activity {
 
         resultTextView = (TextView)findViewById(R.id.result_text);
         scan_btn = (Button) findViewById(R.id.btn_scan);
-        
+
     }
 
     public void onPause(){
@@ -56,7 +57,11 @@ public class MainActivity extends Activity {
         super.onPause();
     }
 
-
+    public void buttonOnClick(View v){
+        Button button = (Button) v;
+        ((Button) v).setText("clicked");
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+    }
 
 
 }
