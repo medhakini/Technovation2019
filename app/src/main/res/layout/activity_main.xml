@@ -8,28 +8,7 @@
     tools:context=".MainActivity"
     android:transitionGroup="true">
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/textToSpeech2"
-        android:textSize="35sp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_marginTop="46dp"
-        android:hint="@string/enterText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#ff7aff10"
-        android:textColorHint="#ffff23d1" />
-
+    <!--This button brings you to the other page for text to speech.-->
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -38,33 +17,25 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
         android:onClick="buttonOnClick"
-        android:text="@string/textToSpeech2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textToSpeech2"
-        android:id="@+id/btn_scan"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="102dp" />
+        android:text="To other page!" />
 
     <TextView
         android:id="@+id/result_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Result"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="400sp"
         android:textSize="20sp"
-        android:gravity="center_horizontal"/> <!--center horizontal gravity-->
+        android:gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/btn_scan_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText"
-        android:layout_marginTop="177dp"
+        android:layout_marginTop="600sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
         android:text="Scan QR and Bar Code" />
-
 
 </RelativeLayout>
