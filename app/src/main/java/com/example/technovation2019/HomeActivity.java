@@ -10,6 +10,8 @@ import java.util.Locale;
 import android.widget.Toast;
 
 public class HomeActivity extends Activity {
+
+
     // initialized for text to speech
     TextToSpeech t1;
     EditText ed1;
@@ -19,8 +21,8 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ed1 = (EditText) findViewById(R.id.editText);
-        b1 = (Button)findViewById(R.id.button);
+        ed1 = findViewById(R.id.editText);
+        b1 = findViewById(R.id.button);
 
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override

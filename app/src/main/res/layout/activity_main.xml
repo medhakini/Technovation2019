@@ -29,13 +29,12 @@
         android:gravity="center_horizontal"/>
 
     <Button
-        android:id="@+id/btn_scan_me"
+        android:id="@+id/scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="600sp"
-        android:layout_centerHorizontal="true"
+        android:clickable="true"
         android:gravity="center_horizontal"
-        android:text="Scan QR and Bar Code" />
+        android:text="Scan QR and Bar Code"
+        android:textSize="16sp" />
 
 </RelativeLayout>

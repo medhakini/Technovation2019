@@ -1,9 +1,8 @@
 package com.example.technovation2019;
+import com.google.zxing.Result;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 

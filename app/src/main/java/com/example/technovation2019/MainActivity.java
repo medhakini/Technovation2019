@@ -10,24 +10,27 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-
     // initialized for qr code / barcode scanning
     public static TextView resultTextView;
-    Button scan_btn;
+    // refers to button that will start the scanning
+    Button scan_btn = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        resultTextView = (TextView) findViewById(R.id.result_text);
-        // refers to button that will start the scanning
-        scan_btn = (Button) findViewById(R.id.btn_scan_me);
+        resultTextView = findViewById(R.id.result_text);
+        scan_btn = findViewById(R.id.scan);
 
-        scan_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class));
-            }
-        });
+        try {
+            scan_btn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class));
+                }
+            });
+        } catch (NullPointerException ignored) {
+
+        }
     }
 
     public void buttonOnClick(View v){
