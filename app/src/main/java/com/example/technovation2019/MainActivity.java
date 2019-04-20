@@ -1,43 +1,29 @@
 package com.example.technovation2019;
 
-import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.content.Intent;
+import android.widget.EditText;
 
-import android.widget.TextView;
+import com.example.technovation2019.HomeActivity;
 
-public class MainActivity extends Activity {
-
-    // initialized for qr code / barcode scanning
-    public static TextView resultTextView;
-    // refers to button that will start the scanning
-    Button scan_btn = null;
+public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        resultTextView = findViewById(R.id.result_text);
-        scan_btn = findViewById(R.id.scan);
-
-        try {
-            scan_btn.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class));
-                }
-            });
-        } catch (NullPointerException ignored) {
-
-        }
+        setContentView(R.layout.activity_main);
     }
 
-    public void buttonOnClick(View v){
-        Button button = (Button) v;
-        ((Button) v).setText("Clicked");
-        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+    /** Called when the user taps the Send button */
+    public void switchPage(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        EditText editText = (EditText) findViewById(R.id.editText);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }
-
 
