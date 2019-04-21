@@ -1,20 +1,19 @@
 package com.example.technovation2019;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.google.zxing.Result;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+public class ScanCodeActivity extends MainActivity implements ZXingScannerView.ResultHandler {
 
-    ZXingScannerView ScannerView;
+    private ZXingScannerView ScannerView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan_code);
         ScannerView = new ZXingScannerView(this);
         setContentView(ScannerView);
+        System.out.println("Scan initiated");
     }
 
     @Override
