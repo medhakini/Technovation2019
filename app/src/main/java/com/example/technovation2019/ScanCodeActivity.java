@@ -1,10 +1,12 @@
 package com.example.technovation2019;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
 import com.google.zxing.Result;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class ScanCodeActivity extends MainActivity implements ZXingScannerView.ResultHandler {
+public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     private ZXingScannerView ScannerView;
 
@@ -18,7 +20,7 @@ public class ScanCodeActivity extends MainActivity implements ZXingScannerView.R
 
     @Override
     public void handleResult(Result result) {
-        HomeActivity.result.setText(result.getText());
+        HomeActivity.result_text.setText(result.getText());
         onBackPressed();
     }
 

@@ -8,5 +8,6 @@
     <string name="med_waste">How to dispose of medical waste</string>
     <string name="welcome">Welcome!</string>
     <string name="scan_barcode">SCAN QR CODE</string>
-    <string name="result">[ The result from the scan will be displayed here ]</string>
+    <string name="result">The result from the scan will be displayed here</string>
+    <string name="text_to_speech">READ RESULT</string>
 </resources>
