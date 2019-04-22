@@ -11,15 +11,12 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-
 public class HomeActivity extends AppCompatActivity {
 
     public static TextView result_text;
     private Button scan_btn;
     private Button speech_btn;
     TextToSpeech text_speech;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +25,20 @@ public class HomeActivity extends AppCompatActivity {
 
         result_text = (TextView) findViewById(R.id.result);
         scan_btn = (Button) findViewById(R.id.btnScanCode);
-        speech_btn= (Button) findViewById(R.id.btnTextSpeech);
+        speech_btn = (Button) findViewById(R.id.btnTextSpeech);
 
         text_speech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 if(status != TextToSpeech.ERROR) {
-                    text_speech.setLanguage(Locale.UK);
+                    int result = text_speech.setLanguage(Locale.US);
+
+
+                    if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                        System.out.println("Language not supported");
+                    } else {
+                        speech_btn.setEnabled(true);
+                    }
                 }
             }
         });
