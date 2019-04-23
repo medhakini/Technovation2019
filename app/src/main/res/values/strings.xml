@@ -14,9 +14,8 @@
     <string name="result">The result from the scan will be displayed here</string>
     <string name="text_to_speech">READ RESULT</string>
 
-    <string name="med_waste_explanation">There are many different steps one can take to ensure of the
-        safe disposal of medical waste at home. For one, a medical waste container should be placed
-        at your home. This medical waste box will than collect any item that encounters body fluids
-        and or any solid waste that is being generated in the diagnosis, treatment or immunization of human.
-        If one has any sharps that needs to be disposed of when home, one must have a “sharps container”.</string>
+    <string name="med_waste_explanation">There are some steps you can take to ensure that medical
+        waste is disposed of properly. 1) Obtain a medical waste container from a local provider
+        and place it in your home. 2) If you have any sharp items to dispose of, obtain a separate
+        sharps container". 3) Find a drop-off collection point or a local landfill to dispose of the waste.</string>
 </resources>
