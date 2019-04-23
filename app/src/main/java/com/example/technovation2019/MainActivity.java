@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.technovation2019.HomeActivity;
-
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "";
 
@@ -17,12 +15,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /** Called when the user taps the Send button */
-    public void switchPage(View view) {
+    /** Called when the user taps the OK button */
+    public void switchToHomePage(View view) {
         Intent intent = new Intent(this, HomeActivity.class);
         EditText editText = (EditText) findViewById(R.id.editText);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    /** Called when the user taps the CONTACT US button */
+    public void switchToContactPage(View view) {
+        Intent intent = new Intent(this, ContactUsActivity.class);
         startActivity(intent);
     }
 }

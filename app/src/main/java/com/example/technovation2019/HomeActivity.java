@@ -33,7 +33,6 @@ public class HomeActivity extends AppCompatActivity {
                 if(status != TextToSpeech.ERROR) {
                     int result = text_speech.setLanguage(Locale.US);
 
-
                     if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                         System.out.println("Language not supported");
                     } else {
@@ -43,6 +42,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        /** TEXT TO SPEECH */
         speech_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent intentMessage = getIntent();
         String message = intentMessage.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
-        // Capture the layout's TextView and set the string as its text
+        /** Takes name inputted on MAIN page and adds it to welcome message on the HOME page */
         TextView textView = findViewById(R.id.welcome);
         if (message != null) {
             textView.setText("Welcome, " + message + "!");
@@ -63,6 +63,7 @@ public class HomeActivity extends AppCompatActivity {
             textView.setText("Welcome!");
         }
 
+        /** Opens the CAMERA to scan a QR code */
         scan_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,8 +73,14 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+    /** Called when the user taps the CONTACT US button */
+    public void switchToMedWastePage(View view) {
+        Intent intent = new Intent(this, MedWasteActivity.class);
+        startActivity(intent);
+    }
+
     public void onPause(){
-        if(text_speech !=null){
+        if(text_speech != null){
             text_speech.stop();
             text_speech.shutdown();
         }
