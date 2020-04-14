@@ -1,4 +1,4 @@
-# Technovation2019
+# Santé
 
 INTRO:
 This Android app was created as a submission for the 2018-2019 Technovation Challenge by the Binary Buds, Kalie Ching and Medha Kini.
