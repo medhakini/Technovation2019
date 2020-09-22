@@ -8,3 +8,5 @@ The Binary Buds’ app, Santé, was created in order to provide an easy and safe
 
 CONTACT:
 If you have any questions, feel free to contact us at kaliefaith@gmail.com and medha.kini@gmail.com.
+
+Business Plan: https://docs.google.com/document/d/1zr2HBrRK6Jzsizw774LtdyPPvirIT-njjVlR0r2N03A/edit?usp=sharing
